@@ -1,0 +1,56 @@
+#This rule changes the variant forms of the Noncitizens subject heading when they appear with Illegal immigration in the 650 field.
+rule "Change 650.a Noncitizens to 650.a Undocumented immigrants when appearing with 650.a Illegal immigration"
+when
+    (exists "650.a.Noncitizens*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+then
+    replaceContents "650.a.Noncitizens" with "Undocumented immigrants"
+end 
+
+
+rule "Change 650.a Children of noncitizens to 650.a Children of undocumented immigrants when appearing with 650.a Illegal immigration"
+when
+    (exists "650.a.Children of noncitizens*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+then
+    replaceContents "650.a.Children of noncitizens" with "Children of undocumented immigrants"
+end
+ 
+
+rule "Change 650.a Church work with noncitizens to 650.a Church work with undocumented immigrants when appearing with 650.a Illegal immigration"
+when
+    (exists "650.a.Church work with noncitizens*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+then
+    replaceContents "650.a.Church work with noncitizens" with "Church work with undocumented immigrants"
+end
+ 
+
+rule "Change 650.a Noncitizen children to 650.a Undocumented immigrant children when appearing with 650.a Illegal immigration"
+when
+    (exists "650.a.Noncitizen children*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+then
+    replaceContents "650.a.Noncitizen children" with "Undocumented immigrant children"
+end
+
+
+rule "Change 650.a Noncitizens in literature to 650.a Undocumented immigrants in literature when appearing with 650.a Illegal immigration"
+when
+    (exists "650.a.Noncitizens in literature*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+then
+    replaceContents "650.a.Noncitizens in literature" with "Undocumented immigrants in literature"
+end
+
+ 
+rule "Change 650.a Women noncitizens to 650.a Women undocumented immigrants when appearing with 650.a Illegal immigration"
+when
+    (exists "650.a.Women noncitizens*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+then
+    replaceContents "650.a.Women noncitizens" with "Women undocumented immigrants"
+end
+
+
+rule "Second indicator 7 and subfield 2"
+when
+    exists "650.a.Undocumented immigration*|Illegal immigration*"
+then
+    changeSecondIndicator "650" to "7" if (exists "650.a.Undocumented immigration*|Noncitizens*|Children of noncitizens*|Church work with noncitizens*|Noncitizen children*|Noncitizens in literature*|Women noncitizens*")
+    addSubField "650.2.local" if (exists "650.a.Undocumented immigration*|Noncitizens*|Children of noncitizens*|Church work with noncitizens*|Noncitizen children*|Noncitizens in literature*|Women noncitizens*")  
+end
