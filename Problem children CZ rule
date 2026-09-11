@@ -1,65 +1,49 @@
-#This rule supplements Alma Community Zone records that contain the subject heading Problem children and variants.
-rule "Add 690.a.Undocumented immigration when 650.a.Illegal immigration exists"
+#This rule supplements Alma community zone records containing the subject heading Problem children (and variants) with the subject headings Children with behavioral problems
+rule "Add 690.a.Children with behavioral problems when 650.a.Problem children exists"
 when
-    (exists "650.a.Illegal immigration*")
+    (exists "650.a.Problem children*")
 then
-     addField "690.a.Undocumented immigration" if (not exists "690.a.Undocumented immigration*")
-     addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigration")
-     addSubfield "690.9.local" if (exists "690.a.Undocumented immigration")
+     addField "690.a.Children with behavioral problems" if (not exists "690.a.Children with behavioral problems*")
+     addSubfield "690.5.NbU" if (exists "690.a.Children with behavioral problems")
+     addSubfield "690.9.local" if (exists "690.a.Children with behavioral problems")
 end 
 
-rule "Add 690.a.Undocumented immigration in literature when 650.a.Illegal immigration in literature exists"
+rule "Add 690.a.Parents of children with behavioral problems when 650.a.Parents of problem children "
 when
-    (exists "650.a.Illegal immigration in literature*")
+    (exists "650.a.Parents of problem children*")
 then
-     addField "690.a.Undocumented immigration in literature" if (not exists "690.a.Undocumented immigration in literature*")
-     addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigration in literature")
-     addSubfield "690.9.local" if (exists "690.a.Undocumented immigration in literature")
+     addField "690.a.Parents of children with behavioral problems" if (not exists "690.a.Parents of children with behavioral problems*")
+     addSubfield "690.5.NbU" if (exists "690.a.Parents of children with behavioral problems")
+     addSubfield "690.9.local" if (exists "690.a.Parents of children with behavioral problems")
 end 
 
-rule "Add 690.a.Undocumented immigrants when 650.a.Noncitizens appearing with 650.a Illegal immigration"
+rule "Add 690.a.Church work for children with behavioral problems when 650.a.Church work with problem children"
 when
-    (exists "650.a.Noncitizens*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+    (exists "650.a.Church work with problem children*") 
 then
-    addField "690.a.Undocumented immigrants" if (not exists "690.a.Undocumented immigrants*")
-    addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigrants")
-    addSubfield "690.9.local" if (exists "690.a.Undocumented immigrants")
+    addField "690.a.Church work for children with behavioral problems" if (not exists "690.a.Church work for children with behavioral problems*")
+    addSubfield "690.5.NbU" if (exists "690.a.Church work for children with behavioral problems")
+    addSubfield "690.9.local" if (exists "690.a.Church work for children with behavioral problems")
 end 
 
-rule "Add 690.a.Children of undocumented immigrants when 650.a.Children of noncitizens appearing with 650.a Illegal immigration"
+
+rule "Add 690.a.Physical education for children with behavioral problems when 650.a.Physical education for problem children"
 when
-    (exists "650.a.Children of noncitizens*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+    (exists "650.a.Physical education for problem children*") 
 then
-    addField "690.a.Children of undocumented immigrants" if (not exists "690.a.Children of undocumented immigrants*")
-    addSubfield "690.5.NbU" if (exists "690.a.Children of undocumented immigrants")
-    addSubfield "690.9.local" if (exists "690.a.Children of undocumented immigrants")
+    addField "690.a.Physical education for children with behavioral problems" if (not exists "690.a.Pyhsical education for children with behavioral problems*")
+    addSubfield "690.5.NbU" if (exists "690.a.Physical education for children with behavioral problems")
+    addSubfield "690.9.local" if (exists "690.a.Physical education for children with behavioral problems")
 end
  
-rule "Add 690.a.Church work with undocumented immigrants when 650.a.Church work with noncitizens appearing with 650.a Illegal immigration"
+
+rule "Add 690.a.Teachers of children with behavioral problems when 650.a.Teachers of problem children"
 when
-    (exists "650.a.Church work with noncitizens*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
+    (exists "650.a.Teachers of problem children*") 
 then
-    addField "690.a.Church work with undocumented immigrants" if (not exists "690.a.Church work with undocumented immigrants*")
-    addSubfield "690.5.NbU" if (exists "690.a.Church work with undocumented immigrants")
-    addSubfield "690.9.local" if (exists "690.a.Church work with undocumented immigrants")
-end
- 
-rule "Add 690.a.Undocumented immigrant children when 650.a.Noncitizen children appearing with 650.a Illegal immigration"
-when
-    (exists "650.a.Noncitizen children*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
-then
-    addField "690.a.Undocumented immigrant children" if (not exists "690.a.Undocumented immigrant children*")
-    addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigrant children")
-    addSubfield "690.9.local" if (exists "690.a.Undocumented immigrant children")
-end
- 
-rule "Add 690.a.Undocumented immigrants in literature when 650.a.Noncitizens in literature appearing with 650.a Illegal immigration"
-when
-    (exists "690.a.Noncitizens in literature*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
-then
-    addField "690.a.Undocumented immigrants in literature" if (not exists "690.a.Undocumented immigrants in literature*")
-    addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigrants in literature")
-    addSubfield "690.9.local" if (exists "690.a.Undocumented immigrants in literature")
+    addField "690.a.Teachers of children with behavioral problems" if (not exists "690.a.Teachers of children with behavioral problems*")
+    addSubfield "690.5.NbU" if (exists "690.a.Teachers of children with behavioral problems")
+    addSubfield "690.9.local" if (exists "690.a.Teachers of children with behavioral problems")
 end
 
 rule "Deletes duplicate subfields"
