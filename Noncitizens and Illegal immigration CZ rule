@@ -1,4 +1,4 @@
-#This rule supplements records that are 1) sourced from the Alma Community Zone and 2) contain the Noncitizens and Illegal immigration subject headings
+#This rule supplements records that are from the Alma Community Zone and contain the subject headings Noncitizens and Illegal immigration.
 rule "Add 690.a.Undocumented immigration when 650.a.Illegal immigration exists"
 when
     (exists "650.a.Illegal immigration*")
