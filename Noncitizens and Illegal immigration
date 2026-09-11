@@ -1,4 +1,4 @@
-#This rule changes the variant forms of the Noncitizens subject heading when they appear with Illegal immigration in the 650 field.
+#This rule changes variant forms of the subject heading Noncitizens when they appear with Illegal immigration in the 650 field.
 rule "Change 650.a Noncitizens to 650.a Undocumented immigrants when appearing with 650.a Illegal immigration"
 when
     (exists "650.a.Noncitizens*") and (exists "650.a.Undocumented immigration*|Illegal immigration*")
