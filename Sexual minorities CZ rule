@@ -1,0 +1,261 @@
+#This rule supplements Alma community zone records containing the subject heading Sexual minorities (and variants) with the subject headings LGBTQIA2S+ people
+rule "Add 690.a.LGBTQIA2S+ people when 650.a.Sexual minorities exists"
+when
+    (exists "650.a.Sexual minorities*")
+then
+     addField "690.a.LGBTQIA2S+ people" if (not exists "690.a.LGBTQIA2S+ people*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people")
+end 
+
+rule "Add 690.a.African American LGBTQIA2S+ people when 650.a.African American sexual minorities"
+when
+    (exists "650.a.African American sexual minorities*")
+then
+     addField "690.a.African American LGBTQIA2S+ people" if (not exists "690.a.African American LGBTQIA2S+ people*")
+     addSubfield "690.5.NbU" if (exists "690.a.African American LGBTQIA2S+ people")
+     addSubfield "690.9.local" if (exists "690.a.African American LGBTQIA2S+ people")
+end 
+
+rule "Add 690.a.Asian American LGBTQIA2S+ people when 650.a.Asian American sexual minorities"
+when
+    (exists "650.a.Asian American sexual minorities*") 
+then
+    addField "690.a.Asian American LGBTQIA2S+ people" if (not exists "690.a.Asian American LGBTQIA2S+ people*")
+    addSubfield "690.5.NbU" if (exists "690.a.Asian American LGBTQIA2S+ people")
+    addSubfield "690.9.local" if (exists "690.a.Asian American LGBTQIA2S+ people")
+end 
+
+
+rule "Add 690.a.Christian LGBTQIA2S+ people when 650.a.Christian sexual minorities"
+when
+    (exists "650.a.Christian sexual minorities*") 
+then
+    addField "690.a.Christian LGBTQIA2S+ people" if (not exists "690.a.Christian LGBTQIA2S+ people*")
+    addSubfield "690.5.NbU" if (exists "690.a.Christian LGBTQIA2S+ people")
+    addSubfield "690.9.local" if (exists "690.a.Christian LGBTQIA2S+ people")
+end
+ 
+
+rule "Add 690.a.Hispanic American LGBTQIA2S+ people when 650.a.Hispanic American sexual minorities"
+when
+    (exists "650.a.Hispanic American sexual minorities*") 
+then
+    addField "690.a.Hispanic American LGBTQIA2S+ people" if (not exists "690.a.Hispanic American LGBTQIA2S+ people*")
+    addSubfield "690.5.NbU" if (exists "690.a.Hispanic American LGBTQIA2S+ people")
+    addSubfield "690.9.local" if (exists "690.a.Hispanic American LGBTQIA2S+ people")
+end
+
+rule "Add 690.a.LGBTQIA2S+ activism when 650.a.LGBT activism"
+when
+    (exists "650.a.LGBT activism*") 
+then
+    addField "690.a.LGBTQIA2S+ activism" if (not exists "690.a.LGBTQIA2S+ activism*")
+    addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ activism")
+    addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ activism")
+end
+
+rule "Add 690.a.Libraries and LGBTQIA2S+ people when 650.a.Libraries and sexual minorities exists"
+when
+    (exists "650.a.Libraries and sexual minorities*")
+then
+     addField "690.a.Libraries and LGBTQIA2S+ people" if (not exists "690.a.Libraries and LGBTQIA2S+ people*")
+     addSubfield "690.5.NbU" if (exists "690.a.Libraries and LGBTQIA2S+ people")
+     addSubfield "690.9.local" if (exists "690.a.Libraries and LGBTQIA2S+ people")
+end
+
+rule "Add 690.a.Middle-aged LGBTQIA2S+ people when 650.a.Middle-aged sexual minorities exists"
+when
+    (exists "650.a.Middle-aged sexual minorities*")
+then
+     addField "690.a.Middle-aged LGBTQIA2S+ people" if (not exists "690.a.Middle-aged LGBTQIA2S+ people*")
+     addSubfield "690.5.NbU" if (exists "690.a.Middle-aged LGBTQIA2S+ people")
+     addSubfield "690.9.local" if (exists "690.a.Middle-aged LGBTQIA2S+ people")
+end
+
+rule "Add 690.a.Museums and LGBTQIA2S+ people when 650.a.Museums and sexual minorities exists"
+when
+    (exists "650.a.Museums and sexual minorities*")
+then
+     addField "690.a.Museums and LGBTQIA2S+ people" if (not exists "690.a.LGBTQIA2S+ people*")
+     addSubfield "690.5.NbU" if (exists "690.a.Museums and LGBTQIA2S+ people")
+     addSubfield "690.9.local" if (exists "690.a.Museums and LGBTQIA2S+ people")
+end
+
+rule "Add 690.a.LGBTQIA2S+ and sports when 650.a.Sexual minorities and sports exists"
+when
+    (exists "650.a.Sexual minorities and sports*")
+then
+     addField "690.a.LGBTQIA2S+ and sports" if (not exists "690.a.LGBTQIA2S+ and sports*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ and sports")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ and sports")
+end
+
+rule "Add 690.a.LGBTQIA2S+ families when 650.a.Sexual minorities' families exists"
+when
+    (exists "650.a.Sexual minorities' families*")
+then
+     addField "690.a.LGBTQIA2S+ families" if (not exists "690.a.LGBTQIA2S+ families*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ families")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ families")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people in art when 650.a.Sexual minorities in art exists"
+when
+    (exists "650.a.Sexual minorities in art*")
+then
+     addField "690.a.LGBTQIA2S+ people in art" if (not exists "690.a.LGBTQIA2S+ people in art*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people in art")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people in art")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people in comics when 650.a.Sexual minorities in comics exists"
+when
+    (exists "650.a.Sexual minorities in comics*")
+then
+     addField "690.a.LGBTQIA2S+ people in comics" if (not exists "690.a.LGBTQIA2S+ people in comics*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people in comics")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people in comics")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people in higher education when 650.a.Sexual minorities in higher education exists"
+when
+    (exists "650.a.Sexual minorities in higher education*")
+then
+     addField "690.a.LGBTQIA2S+ people in higher education" if (not exists "690.a.LGBTQIA2S+ people in higher education*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people in higher education")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people in higher education")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people in literature when 650.a.Sexual minorities in literature exists"
+when
+    (exists "650.a.Sexual minorities in literature*")
+then
+     addField "690.a.LGBTQIA2S+ people in literature" if (not exists "690.a.LGBTQIA2S+ people in literature*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people in literature")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people in literature")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people in mass media when 650.a.Sexual minorities in mass media exists"
+when
+    (exists "650.a.Sexual minorities in mass media*")
+then
+     addField "690.a.LGBTQIA2S+ people in mass media" if (not exists "690.a.LGBTQIA2S+ people in mass media*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people in mass media")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people in mass media")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people in popular culture when 650.a.Sexual minorities in popular culture exists"
+when
+    (exists "650.a.Sexual minorities in popular culture*")
+then
+     addField "690.a.LGBTQIA2S+ people in popular culture" if (not exists "690.a.LGBTQIA2S+ people in popular culture*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people in popular culture")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people in popular culture")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people with disabilities when 650.a.Sexual minorities with disabilities exists"
+when
+    (exists "650.a.Sexual minorities with disabilities*")
+then
+     addField "690.a.LGBTQIA2S+ people with disabilities" if (not exists "690.a.LGBTQIA2S+ people with disabilities*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people with disabilities")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people with disabilities")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people's writings, American when 650.a.Sexual minorities' writings, American exists"
+when
+    (exists "650.a.Sexual minorities' writings, American*")
+then
+     addField "690.a.LGBTQIA2S+ people's writings, American" if (not exists "690.a.LGBTQIA2S+ people's writings, American*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people's writings, American")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people's writings, American")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people's writings, Canadian when 650.a.Sexual minorities' writings, Canadian exists"
+when
+    (exists "650.a.Sexual minorities' writings, Canadian*")
+then
+     addField "690.a.LGBTQIA2S+ people's writings, Canadian" if (not exists "690.a.LGBTQIA2S+ people's writings, Canadian*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people's writings, Canadian")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people's writings, Canadian")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people's writings, German when 650.a.Sexual minorities' writings, German exists"
+when
+    (exists "650.a.Sexual minorities' writings, German*")
+then
+     addField "690.a.LGBTQIA2S+ people's writings, German" if (not exists "690.a.LGBTQIA2S+ people's writings, German*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people's writings, German")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people's writings, German")
+end
+
+rule "Add 690.a.LGBTQIA2S+ people, Romani when 650.a.Sexual minorities, Romani exists"
+when
+    (exists "650.a.Sexual minorities, Romani*")
+then
+     addField "690.a.LGBTQIA2S+ people, Romani" if (not exists "690.a.LGBTQIA2S+ people, Romani*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ people, Romani")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ people, Romani")
+end
+
+rule "Add 690.a.LGBTQIA2S+ activists when 650.a.Sexual minority activists exists"
+when
+    (exists "650.a.Sexual minority activists*")
+then
+     addField "690.a.LGBTQIA2S+ activists" if (not exists "690.a.LGBTQIA2S+ activists*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ activists")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ activists")
+end
+
+rule "Add 690.a.LGBTQIA2S+ immigrants when 650.a.Sexual minority immigrants exists"
+when
+    (exists "650.a.Sexual minority immigrants*")
+then
+     addField "690.a.LGBTQIA2S+ immigrants" if (not exists "690.a.LGBTQIA2S+ immigrants*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ immigrants")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ immigrants")
+end
+
+rule "Add 690.a.LGBTQIA2S+ men when 650.a.Sexual minority men exists"
+when
+    (exists "650.a.Sexual minority men*")
+then
+     addField "690.a.LGBTQIA2S+ men" if (not exists "690.a.LGBTQIA2S+ men*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ men")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ men")
+end
+
+rule "Add 690.a.LGBTQIA2S+ military personnel when 650.a.Sexual minority military personnel exists"
+when
+    (exists "650.a.Sexual minority military personnel*")
+then
+     addField "690.a.LGBTQIA2S+ military personnel" if (not exists "690.a.LGBTQIA2S+ military personnel*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ military personnel")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ military personnel")
+end
+
+rule "Add 690.a.LGBTQIA2S+ women when 650.a.Sexual minority women exists"
+when
+    (exists "650.a.Sexual minority women*")
+then
+     addField "690.a.LGBTQIA2S+ women" if (not exists "690.a.LGBTQIA2S+ women*")
+     addSubfield "690.5.NbU" if (exists "690.a.LGBTQIA2S+ women")
+     addSubfield "690.9.local" if (exists "690.a.LGBTQIA2S+ women")
+end
+
+rule "Add 690.a.Social work with LGBTQIA2S+ people when 650.a.Social work with sexual minorities exists"
+when
+    (exists "650.a.Social work with sexual minorities*")
+then
+     addField "690.a.Social work with LGBTQIA2S+ people" if (not exists "690.a.Social work with LGBTQIA2S+ people*")
+     addSubfield "690.5.NbU" if (exists "690.a.Social work with LGBTQIA2S+ people")
+     addSubfield "690.9.local" if (exists "690.a.Social work with LGBTQIA2S+ people")
+end
+
+rule "Deletes duplicate subfields"
+when
+    (true)
+then
+    correctDuplicateSubfields "690" "59"
+end
