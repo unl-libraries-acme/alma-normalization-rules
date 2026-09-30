@@ -6,6 +6,8 @@ then
     addField "690.a.Mexico, Gulf of" if (not exists "690.a.Mexico, Gulf of*")
     addSubfield "690.5.NbU" if (exists "690.a.Mexico, Gulf of")
     addSubfield "690.9.local" if (exists "690.a.Mexico, Gulf of")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
 
 rule "Add 690.a.Mexico, Gulf of when 650.z.America, Gulf of*"
@@ -15,6 +17,8 @@ then
     addField "690.a.Mexico, Gulf of" if (not exists "690.a.Mexico, Gulf of*")
     addSubfield "690.5.NbU" if (exists "690.a.Mexico, Gulf of")
     addSubfield "690.9.local" if (exists "690.a.Mexico, Gulf of")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
 
 rule "Add 690.a.Denali, Mount (Alaska), Gulf of when 651.a.McKinley, Mount (Alaska)*"
@@ -24,6 +28,8 @@ then
     addField "690.a.Denali, Mount (Alaska)" if (not exists "690.a.Denali, Mount (Alaska)*")
     addSubfield "690.5.NbU" if (exists "690.a.Denali, Mount (Alaska)")
     addSubfield "690.9.local" if (exists "690.a.Denali, Mount (Alaska)")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
 
 rule "Add 690.a.Denali, Mount (Alaska), Gulf of when 650.z.McKinley, Mount (Alaska)*"
@@ -33,11 +39,6 @@ then
     addField "690.a.Denali, Mount (Alaska)" if (not exists "690.a.Denali, Mount (Alaska)*")
     addSubfield "690.5.NbU" if (exists "690.a.Denali, Mount (Alaska)")
     addSubfield "690.9.local" if (exists "690.a.Denali, Mount (Alaska)")
-end
-
-rule "Deletes duplicate subfields"
-when
-    (true)
-then
     correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
