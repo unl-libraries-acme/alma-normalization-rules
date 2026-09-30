@@ -6,6 +6,8 @@ then
      addField "690.a.Children with behavioral problems" if (not exists "690.a.Children with behavioral problems*")
      addSubfield "690.5.NbU" if (exists "690.a.Children with behavioral problems")
      addSubfield "690.9.local" if (exists "690.a.Children with behavioral problems")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end 
 
 rule "Add 690.a.Parents of children with behavioral problems when 650.a.Parents of problem children "
@@ -15,6 +17,8 @@ then
      addField "690.a.Parents of children with behavioral problems" if (not exists "690.a.Parents of children with behavioral problems*")
      addSubfield "690.5.NbU" if (exists "690.a.Parents of children with behavioral problems")
      addSubfield "690.9.local" if (exists "690.a.Parents of children with behavioral problems")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end 
 
 rule "Add 690.a.Church work for children with behavioral problems when 650.a.Church work with problem children"
@@ -24,6 +28,8 @@ then
     addField "690.a.Church work for children with behavioral problems" if (not exists "690.a.Church work for children with behavioral problems*")
     addSubfield "690.5.NbU" if (exists "690.a.Church work for children with behavioral problems")
     addSubfield "690.9.local" if (exists "690.a.Church work for children with behavioral problems")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end 
 
 
@@ -34,6 +40,8 @@ then
     addField "690.a.Physical education for children with behavioral problems" if (not exists "690.a.Pyhsical education for children with behavioral problems*")
     addSubfield "690.5.NbU" if (exists "690.a.Physical education for children with behavioral problems")
     addSubfield "690.9.local" if (exists "690.a.Physical education for children with behavioral problems")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
  
 
@@ -44,11 +52,6 @@ then
     addField "690.a.Teachers of children with behavioral problems" if (not exists "690.a.Teachers of children with behavioral problems*")
     addSubfield "690.5.NbU" if (exists "690.a.Teachers of children with behavioral problems")
     addSubfield "690.9.local" if (exists "690.a.Teachers of children with behavioral problems")
-end
-
-rule "Deletes duplicate subfields"
-when
-    (true)
-then
     correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
