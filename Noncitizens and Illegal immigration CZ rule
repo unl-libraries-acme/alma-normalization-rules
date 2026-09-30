@@ -6,6 +6,8 @@ then
      addField "690.a.Undocumented immigration" if (not exists "690.a.Undocumented immigration*")
      addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigration")
      addSubfield "690.9.local" if (exists "690.a.Undocumented immigration")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end 
 
 rule "Add 690.a.Undocumented immigration in literature when 650.a.Illegal immigration in literature exists"
@@ -15,6 +17,8 @@ then
      addField "690.a.Undocumented immigration in literature" if (not exists "690.a.Undocumented immigration in literature*")
      addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigration in literature")
      addSubfield "690.9.local" if (exists "690.a.Undocumented immigration in literature")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end 
 
 rule "Add 690.a.Undocumented immigrants when 650.a.Noncitizens appearing with 650.a Illegal immigration"
@@ -24,6 +28,8 @@ then
     addField "690.a.Undocumented immigrants" if (not exists "690.a.Undocumented immigrants*")
     addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigrants")
     addSubfield "690.9.local" if (exists "690.a.Undocumented immigrants")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end 
 
 
@@ -34,6 +40,8 @@ then
     addField "690.a.Children of undocumented immigrants" if (not exists "690.a.Children of undocumented immigrants*")
     addSubfield "690.5.NbU" if (exists "690.a.Children of undocumented immigrants")
     addSubfield "690.9.local" if (exists "690.a.Children of undocumented immigrants")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
  
 
@@ -44,6 +52,8 @@ then
     addField "690.a.Church work with undocumented immigrants" if (not exists "690.a.Church work with undocumented immigrants*")
     addSubfield "690.5.NbU" if (exists "690.a.Church work with undocumented immigrants")
     addSubfield "690.9.local" if (exists "690.a.Church work with undocumented immigrants")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
  
 
@@ -54,6 +64,8 @@ then
     addField "690.a.Undocumented immigrant children" if (not exists "690.a.Undocumented immigrant children*")
     addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigrant children")
     addSubfield "690.9.local" if (exists "690.a.Undocumented immigrant children")
+    correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
  
 
@@ -64,11 +76,6 @@ then
     addField "690.a.Undocumented immigrants in literature" if (not exists "690.a.Undocumented immigrants in literature*")
     addSubfield "690.5.NbU" if (exists "690.a.Undocumented immigrants in literature")
     addSubfield "690.9.local" if (exists "690.a.Undocumented immigrants in literature")
-end
-
-rule "Deletes duplicate subfields"
-when
-    (true)
-then
     correctDuplicateSubfields "690" "59"
+    correctDuplicateFields "690"
 end
